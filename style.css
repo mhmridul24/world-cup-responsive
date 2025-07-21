@@ -4,6 +4,7 @@
   padding: 0;
   margin: 0;
   font-family: "Poppins", sans-serif;
+  
 }
 .container{
   max-width: 1280px;
@@ -20,6 +21,10 @@
 img{
   max-width: 100%;
 }
+button:hover{
+  background-color: #dd0000b9;
+  cursor: pointer;
+}
 
 /* Banner design */
 .banner{
@@ -33,6 +38,8 @@ img{
 .banner-left{
   padding-left: 45px;
   flex: 1;
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
 .banner h2{
   font-size: 70px;
@@ -50,4 +57,140 @@ img{
 }
 .banner-right img{
   display: block;
+}
+
+/* Upcoming matches section/ main body part design */
+
+.upcoming-matches{
+  display: flex;
+  padding: 50px 0;
+  gap: 20px;
+}
+
+.main-left{
+  background-color: black;
+  width: 25%;
+  height: fit-content;
+
+  border-radius: 10px;
+  padding: 15px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+/* Button decoration inside main body */
+.main-left .btn:nth-child(1),
+.main-left .btn:nth-child(2){
+  background-color: white;
+  color: black;
+}
+
+.main-right{
+  /* flex: 1; */
+
+  display: grid;
+  grid-template-columns: repeat(3 , 1fr);
+  gap: 17px;
+}
+
+.main-right .card{
+  border: 1px solid rgb(232, 232, 232) ;
+  border-radius: 10px;
+  padding: 5px;
+}
+.main-right .card .card-body,.card-bottom{
+  padding: 10px;
+}
+.main-right .card .card-body h2{
+  font-size: 15px;
+  margin-top: 10px;
+  color: rgba(22, 22, 22, 0.719);
+  font-weight: 600;
+}
+/* Adding space between watch time icon and comment icon */
+.main-right .card-bottom{
+  display: flex;
+  gap: 15px;
+}
+/* Button designing inside main  */
+.main-right .card-body .btn{
+  background-color: white ;
+  color: black;
+  border: 2px solid black;
+  padding: 8px 17px;
+  margin-top: 10px;
+}
+
+.main-right .card img{
+  height: 190px;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+
+
+
+
+/* Responsive design */
+
+/* For Laptop or Tab */
+@media (max-width:992px) {
+  .container{
+    margin: 20px 20px;
+  }
+  .banner h2{
+    font-size: 50px;
+    line-height: 50px;
+  }
+  .upcoming-matches{
+    flex-direction: column;
+  }
+  .main-left{
+    flex-direction: row;
+    width: 100%;
+    background-color: transparent;
+  }
+  .main-left > * {
+    flex: 1;
+  }
+  .main-left .btn{
+    border: 1px solid rgb(232, 232, 232);
+  }
+  .main-right {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+}
+
+/* For Mobile */
+@media (max-width:768px) {
+  .container{
+    margin: 10px;
+  }
+  .banner{
+    flex-direction: column;
+    text-align: center;
+  }
+  .banner .banner-left{
+    margin-bottom: 50px;
+    padding-left: 0;
+    padding-top: 30px;
+  }
+  .banner .banner-left p{
+    /* max-width: 100%; */
+    margin: 15px auto;
+  }
+  .main-left {
+    flex-direction: column;
+    width: 100%;
+    background-color: transparent;
+  }
+ .main-right {
+  grid-template-columns:repeat(1, 1fr) ;
+ }
+
+
+
 }
