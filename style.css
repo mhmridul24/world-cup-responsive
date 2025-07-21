@@ -1,53 +1,53 @@
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin:0 ;
-    font-family: poppins;
-}
-
-/* Shared style */
-.btn-primary{
-    background-color: #DD0000;
-    padding: 10px 15px;
-    border-radius: 5px;
-    color: white;
-    border: none;
-}
-.btn-white{
-    background-color: rgb(255, 255, 255);
-    padding: 10px 15px;
-    border-radius: 5px;
+/* Common and Shared styles */
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
 }
 .container{
-    background-color: black;
-    margin-bottom: 20px;
+  max-width: 1280px;
+  margin: auto;
+}
+.btn{
+  background-color:#DD0000 ;
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-weight: 600;
+  color: white;
+  border: none;
+}
+img{
+  max-width: 100%;
 }
 
+/* Banner design */
 .banner{
-    display: flex;
-    color: white;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 15px 0px 15px;
-
+  display: flex;
+  color: rgb(255, 255, 255);
+  background-color:#161616 ;
+  align-items: center;
+  margin: 50px auto;
+  border-radius: 15px;
 }
-
-.upcoming-matches{
-    display: flex;
-    /* justify-content: space-around; */
-    padding: 50px;
-    gap: 20px;
+.banner-left{
+  padding-left: 45px;
+  flex: 1;
 }
-.upcoming-matches-left{
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    gap: 5px;
-    width: 25%;
-    border-radius: 10px;
+.banner h2{
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 70px;
 }
-.upcoming-matches-right{
-    /* background-color: rgb(215, 109, 109); */
-    flex: 1;
+.banner p{
+  color: white;
+  font-size: 15px;
+  margin: 15px 0;
+  max-width: 65%;
+}
+.banner-right{
+  flex: 1;
+}
+.banner-right img{
+  display: block;
 }
